@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Myeditor from "@/components/Myeditor";
 import { useState, useEffect } from "react";
-import styles from "@/styles/Editor.module.sass";
 
 const Editor = ()=>{
   const [editorLoaded, setEditorLoaded] = useState(false);
@@ -20,7 +19,6 @@ const Editor = ()=>{
         onChange={(data) => {
           setData(data);
         }}
-        className={styles.myEditor}
         editorLoaded={editorLoaded}
       />
       <h4 className="mt-4">目前的 HTML code</h4>

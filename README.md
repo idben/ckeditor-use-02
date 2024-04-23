@@ -59,3 +59,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 2. API 的 JSON 回應，一定要有 url 這項，editor 才能正確的接應與使用
 2. editor 元件中建立上傳的處理器 MyUploadAdapter，並設成 CKeditor 的 plugin
 3. 處理器當中用 fetch 去 call /api/upload2
+
+## 加上 API 與 DB 的使用
+1. 使用 lowdb，資料放在 /data/db.json
+2. .get /api/article 會抓取路由參數 id，將單一文章內容回傳
+3. .get /api/aritcles 會抓取所有文章內容回傳
+4. 文章呈現相關組件在 /pages/article 中
+5. 只要將 api 中的內容改成讀取不同的資料庫，就可以切換資料庫的使用
+6. 看完要記得按星星給回饋一下啊⋯⋯

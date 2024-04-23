@@ -13,14 +13,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="container">
-        <ul>
+        <ol>
           <li>
             <Link href="/upload">測試 Multer 上傳功能</Link>
           </li>
           <li>
-          <Link href="/editor">我的編輯器</Link>
+            <Link href="/editor">編輯器使用</Link>
           </li>
-        </ul>
+          <li>
+            <Link href="/article">文章範例</Link>
+          </li>
+        </ol>
       </main>
     </>
   );
