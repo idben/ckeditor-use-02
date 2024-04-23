@@ -30,7 +30,7 @@ const Upload = () => {
       }
 
       const data = await response.json();
-      alert("文件上傳成功！");
+      alert(`${data.message}: ${data.data}`);
       console.log(data); // 可以在這裡處理回傳的數據
     } catch (error) {
       console.error("上傳錯誤：", error);

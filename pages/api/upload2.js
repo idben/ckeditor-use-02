@@ -21,9 +21,23 @@ const upload = multer({ storage: storage });
 // 使用 next-connect 是為了方便的處理 Next API 路由 Middleware，需要額外安裝
 // 參考文件
 // https://github.com/hoangvvo/next-connect?tab=readme-ov-file
+// upload2.js 是修改給 CKeditor 用的
+
 router.use(upload.single('articleImage'))
   .post((req, res) => {
-    res.status(200).json({ message: "檔案上傳成功!!!", data: req.file.filename });
+    try {
+      if (!req.file) {
+        return res.status(400).json({ message: "檔案未上傳成功" });
+      }
+      let params = {
+        message: "檔案上傳成功",
+        url: "/images/article/"+req.file.filename
+      };
+      res.status(200).json(params);
+    } catch (error) {
+      console.error("處理過程中發生錯誤:", error);
+      res.status(500).json({ message: "伺服器錯誤" });
+    }
   });
 
 export const config = {
