@@ -44,3 +44,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## 建立 uplaod 圖檔用的 API
 1. API 檔案: pages/api/uplaod
 2. 測試用表單 /upload
+3. 用了 multer 做為處理檔案上傳用
+4. 與 next-connect 做為處理在 next 中的 API 的 router 使用
+
+## 安裝與建立 CKeditor 元件
+1. 安裝在 React 中使用 CKeditor 的核心 @ckeditor/ckeditor5-react
+2. 安裝預設配置好的 CKeditor 設定 @ckeditor/ckeditor5-build-classic
+3. 建立 CKeditor 元件，components/Myeditor
+4. 建立使用 Myeditor 的頁面，/editor
+4. 參考[說明頁面](https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html)

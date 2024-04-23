@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^41.3.1",
+    "@ckeditor/ckeditor5-react": "^6.2.0",
     "bootstrap": "^5.3.3",
     "multer": "^1.4.5-lts.1",
     "next": "14.2.2",
