@@ -53,3 +53,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 3. 建立 CKeditor 元件，components/Myeditor
 4. 建立使用 Myeditor 的頁面，/editor
 4. 參考[說明頁面](https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html)
+
+## 將 CKeditor 與 upload API 連接
+1. 修改成 editor 可以使用的 API: /api/upload2
+2. API 的 JSON 回應，一定要有 url 這項，editor 才能正確的接應與使用
+2. editor 元件中建立上傳的處理器 MyUploadAdapter，並設成 CKeditor 的 plugin
+3. 處理器當中用 fetch 去 call /api/upload2
