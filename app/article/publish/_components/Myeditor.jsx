@@ -1,6 +1,5 @@
+"use client"
 import React, { useEffect, useRef } from "react";
-// import { CKEditor } from '@ckeditor/ckeditor5-react';
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 class MyUploadAdapter {
   constructor(loader) {
@@ -13,7 +12,7 @@ class MyUploadAdapter {
         new Promise((resolve, reject) => {
           const formData = new FormData();
           formData.append("articleImage", file);
-          fetch("/api/upload2", {
+          fetch("/api/upload", {
             method: "POST",
             body: formData,
           })
